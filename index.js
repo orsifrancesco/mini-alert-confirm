@@ -28,20 +28,26 @@ const close = function () {
     }, 500);
 }
 
+const replaceEl = function (el) {
+
+    const old_element = el;
+    const new_element = old_element.cloneNode(true);
+    old_element.parentNode.replaceChild(new_element, old_element);
+
+}
+
 const miniAlertConfirm = function (text, callback) {
 
     document.querySelector("html").classList.add("show-mini-alert-confirm");
     document.querySelector("#mini-alert-confirm .text").innerHTML = text;
 
-    document.querySelector("#mini-alert-confirm .button").removeEventListener("click", close);
-
-    const confirmBind = function () { callback(); close(); }
-    document.querySelector("#mini-alert-confirm .button").removeEventListener("click", confirmBind);
+    replaceEl(document.querySelector("#mini-alert-confirm .button--ok"));
+    replaceEl(document.querySelector("#mini-alert-confirm .button--v2"));
 
     if (callback) {
 
+        const confirmBind = function () { callback(); close(); }
         document.querySelector("html").classList.add("show-mini-alert-confirm--confirm");
-
         document.querySelector("#mini-alert-confirm .button--ok").addEventListener("click", confirmBind);
         document.querySelector("#mini-alert-confirm .button--v2").addEventListener("click", close);
 
