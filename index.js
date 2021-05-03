@@ -34,15 +34,21 @@ const miniAlertConfirm = function (text, callback) {
     document.querySelector("#mini-alert-confirm .text").innerHTML = text;
 
     document.querySelector("#mini-alert-confirm .button").removeEventListener("click", close);
-    document.querySelector("#mini-alert-confirm .button").addEventListener("click", close);
+
+    const confirmBind = function () { callback(); close(); }
+    document.querySelector("#mini-alert-confirm .button").removeEventListener("click", confirmBind);
 
     if (callback) {
-        const confirmBind = function () { callback(); close(); }
+
         document.querySelector("html").classList.add("show-mini-alert-confirm--confirm");
-        document.querySelector("#mini-alert-confirm .button--ok").removeEventListener("click", confirmBind);
+
         document.querySelector("#mini-alert-confirm .button--ok").addEventListener("click", confirmBind);
-        document.querySelector("#mini-alert-confirm .button--v2").removeEventListener("click", close);
         document.querySelector("#mini-alert-confirm .button--v2").addEventListener("click", close);
+
+    } else {
+
+        document.querySelector("#mini-alert-confirm .button").addEventListener("click", close);
+
     }
 
 }
