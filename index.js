@@ -12,8 +12,8 @@ window.addEventListener('load', () => {
         <div class="button">Ok</div>
     </div>
     <div class="buttons-container buttons-container--confirm">
-        <div class="button button--ok">Ok</div>
-        <div class="button button--v2">Cancel</div>
+        <div class="button button--ok">Ok</div><!--
+        --><div class="button button--v2">Cancel</div>
     </div>
 </div>
 `);
@@ -41,17 +41,10 @@ const miniAlertConfirm = function (text, callback) {
         document.querySelector("html").classList.add("show-mini-alert-confirm--confirm");
         document.querySelector("#mini-alert-confirm .button--ok").removeEventListener("click", confirmBind);
         document.querySelector("#mini-alert-confirm .button--ok").addEventListener("click", confirmBind);
+        document.querySelector("#mini-alert-confirm .button--v2").removeEventListener("click", close);
+        document.querySelector("#mini-alert-confirm .button--v2").addEventListener("click", close);
     }
 
 }
 
 export default miniAlertConfirm;
-
-/*
-
-import miniAlertConfirm from 'miniAlertConfirm';
-
-alert = function (text) { miniAlertConfirm(text); }
-confirm = function (text, callback) { miniAlertConfirm(text, callback); }
-
-*/

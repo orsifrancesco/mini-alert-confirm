@@ -1,6 +1,6 @@
 {
   "name": "mini-alert-confirm",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple and easy configurable alert/confirm dialog box for Javascript.",
   "main": "index.js",
   "scripts": {
