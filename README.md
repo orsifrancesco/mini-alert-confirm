@@ -12,21 +12,39 @@ Simple and easy configurable alert/confirm dialog box for Javascript.
 $ npm i mini-alert-confirm
 ```
 
-## Examples
+## Import
+
+add the following code on your index.js
 
 ```js
 
-    import miniAlertConfirm from 'mini-alert-confirm';
-    // import 'mini-alert-confirm/index.css';       // <!-- CSS file (optional, if you want to customize the dialog box)
+import miniAlertConfirm from 'mini-alert-confirm';
+// import 'mini-alert-confirm/index.css';                   // <!-- CSS file (optional, if you want to customize the dialog box)
 
-    alert = function (text) { miniAlertConfirm(text); }
-    confirm = function (text, callback) { miniAlertConfirm(text, callback); }
+alert = function (text) { miniAlertConfirm(text); }
+confirm = function (text, callback) { miniAlertConfirm(text, callback); }
+
+```
+
+## Examples
+
+after importing the library you can just call `alert` and `confirm`
+
+```js
+
+alert("I'm a beautiful alert popup!!");
+
+confirm("Do you like this popup?", () => {
+
+    console.log("I'm a callback if you press OK button");
+
+})
 
 ```
 
 ## Demo
 
-[Just a example project where you can see mini-alert-confirm in action..](https://passwordonce.com)
+[Just a example project where you can see mini-alert-confirm in action..](https://scammy.is)
 
 ## License
 

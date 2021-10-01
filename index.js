@@ -12,8 +12,8 @@ window.addEventListener('load', () => {
         <div class="button">Ok</div>
     </div>
     <div class="buttons-container buttons-container--confirm">
-        <div class="button button--v2">Cancel</div>
         <div class="button button--ok">Ok</div>
+        <div class="button button--v2">Cancel</div>
     </div>
 </div>
 `);
