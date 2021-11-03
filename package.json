@@ -1,8 +1,11 @@
 {
   "name": "mini-alert-confirm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple and easy configurable alert/confirm dialog box for Javascript.",
-  "main": "./build/index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [
     "alert",
     "confirm",
