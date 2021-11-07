@@ -1,0 +1,28 @@
+{
+  "name": "mini-alert-confirm",
+  "version": "1.0.0",
+  "description": "Simple and easy configurable alert/confirm dialog box for Javascript.",
+  "main": "./build/index.js",
+  "keywords": [
+    "alert",
+    "confirm",
+    "popup",
+    "dialog",
+    "box",
+    "prompt",
+    "mini",
+    "push",
+    "notification",
+    "push"
+  ],
+  "author": "Francesco Orsi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orsifrancesco/mini-alert-confirm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orsifrancesco/mini-alert-confirm/issues"
+  },
+  "homepage": "https://github.com/orsifrancesco/mini-alert-confirm#readme"
+}
